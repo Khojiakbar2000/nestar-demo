@@ -22,24 +22,16 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div
-        className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
-      >
+
+      <div className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}>
         <main className={styles.main}>
-          <Image
-            className={styles.logo}
-            src="/next.svg"
-            alt="Next.js logo"
-            width={180}
-            height={38}
-            priority
-          />
-          <ol>
-            <li>
-              Get started by editing <code>pages/index.tsx</code>.
-            </li>
-            <li>Save and see your changes instantly.</li>
-          </ol>
+          <h1 className={styles.title}>
+         Pages Router
+          </h1>
+
+          <p className={styles.description}>
+            Get started by editing <code className={styles.code}>pages/index.tsx</code>
+          </p>
 
           <div className={styles.ctas}>
             <a
@@ -57,6 +49,7 @@ export default function Home() {
               />
               Deploy now
             </a>
+
             <a
               href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
               target="_blank"
@@ -67,6 +60,7 @@ export default function Home() {
             </a>
           </div>
         </main>
+
         <footer className={styles.footer}>
           <a
             href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
@@ -82,6 +76,7 @@ export default function Home() {
             />
             Learn
           </a>
+
           <a
             href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -96,6 +91,7 @@ export default function Home() {
             />
             Examples
           </a>
+
           <a
             href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
             target="_blank"
@@ -115,3 +111,4 @@ export default function Home() {
     </>
   );
 }
+
