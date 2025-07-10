@@ -16,10 +16,7 @@ const Home: NextPage=()=>{
         <Stack>
         <Stack className="container" >Top Properties</Stack>
         </Stack>
-
-      
-     
-    </Stack>
+</Stack>
 </Stack>
 )
 }
