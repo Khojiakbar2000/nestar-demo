@@ -6,10 +6,21 @@ import Filter from "@/libs/components/property/Filter";
 
 import { NextPage } from "next";
 import { useState } from "react";
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 
 
 const PropertyList: NextPage = () => {
-const [properties, setProperties] = useState<number[]>([1,2,3,4,5]);
+    const [properties, setProperties] = useState<number[]>([1,2,3,4,5]);
+    const device = useDeviceDetect();
+    console.log("DEVICE DETECTED:", device)
+    if(device==="mobile"){
+        return(
+            <Stack>PROPERTY LIST MOBILE</Stack>
+        )
+    }
+    else{
+
+//const [properties, setProperties] = useState<number[]>([1,2,3,4,5]);
 
 return (
     <div id ={"property-list-page"}style = {{position: "relative"}}>
@@ -53,6 +64,7 @@ return (
                 </div>
 )
 
+}
 }
     
    

@@ -5,17 +5,46 @@ import { Component} from "react"
 import Top from "../Top";
 import Footer from "../Footer"
 import HeadFilter from "../homepage/HeadFilter";
+import useDeviceDetect from "@/libs/hooks/useDeviceDetect";
 
 
 
 const withLayoutMain = (Component: any)=>{
 
     return (props: any) => {
-        return(  <>
+        const device = useDeviceDetect();
+        if(device === "mobile"){
+            return (<>
             <Head>
                 <title>Nestar</title>
-    
                 </Head>
+                <Stack id="mobile-wrap">
+            <Stack id={"top"}>
+                <Top/>
+            </Stack>
+           
+            <Stack id={"main"}>
+              <Component {...props}/>
+    
+            </Stack>
+            <Stack id={"footer"}>
+                <Footer/>
+                </Stack>
+                </Stack>
+    
+              
+            </>
+            );
+        }else {
+
+      return(  
+      <>
+            <Head>
+                <title>Nestar</title>
+    </Head>
+               
+
+           
             <Stack id="pc-wrap">
             <Stack id={"top"}>
                 <Top/>
@@ -32,8 +61,11 @@ const withLayoutMain = (Component: any)=>{
             <Stack id={"footer"}><Footer/></Stack>
             </Stack>
             </>)
+        }
+        }
+       
       
     }
-}
+
 
 export default withLayoutMain;

@@ -1,3 +1,6 @@
+import RefreshIcon from "@mui/icons-material/Refresh";
+import { Square } from "@mui/icons-material";
+import { useState } from "react";
 import {
     Button,
     Checkbox,
@@ -11,9 +14,8 @@ import {
     Tooltip,
     Typography,
   } from "@mui/material";
-  import { useState } from "react";
-  import RefreshIcon from "@mui/icons-material/Refresh";
-  import { Square } from "@mui/icons-material";
+ 
+ 
   
   const Filter = () => {
     const [searchText, setSearchText] = useState<string>("");
